@@ -47,7 +47,7 @@ function syncHttpGet(urlString) {
 }
 
 function checkVersionExists(version) {
-  const url = `https://repo1.maven.org/maven2/com/android/tools/build/gradle/${version}/gradle-${version}.pom`;
+  const url = `https://mvnrepository.com/artifact/com.android.tools.build/gradle/${version}`;
   const response = syncHttpGet(url);
   return response.statusCode === 200;
 }
@@ -72,7 +72,7 @@ function withCustomAGP(config, props = {}) {
   const isValid = checkVersionExists(version);
   if (!isValid) {
     throw new Error(
-      `Invalid AGP version "${version}". Please check https://repo1.maven.org/maven2/com/android/tools/build/gradle/ for valid versions.`,
+      `Invalid AGP version "${version}". Please check https://mvnrepository.com/artifact/com.android.tools.build/gradle/ for valid versions.`,
     );
   }
 
