@@ -47,7 +47,7 @@ function syncHttpGet(urlString) {
 }
 
 function checkVersionExists(version) {
-  const url = `https://mvnrepository.com/artifact/com.android.tools.build/gradle/${version}`;
+  const url = `https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/${version}/gradle-${version}.pom`;
   const response = syncHttpGet(url);
   return response.statusCode === 200;
 }
