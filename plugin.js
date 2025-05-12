@@ -78,7 +78,8 @@ function withCustomAGP(config, props = {}) {
 
   return withProjectBuildGradle(config, (config) => {
     config.modResults.contents = config.modResults.contents.replace(
-      /classpath\(['"]com\.android\.tools\.build:gradle:[^'"]+['"]\)/,
+      // eslint-disable-next-line no-useless-escape
+      /classpath\([\'"\]com\.android\.tools\.build:gradle:[^\'\"]+[\'\"]\)/, // The extra backslashes are intentional to escape the regex in the string
       `classpath('com.android.tools.build:gradle:${version}')`,
     );
     return config;
