@@ -1,6 +1,6 @@
 {
   "name": "expo-custom-agp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "description": "An Expo config plugin to customize Android Gradle Plugin (AGP) version",
   "type": "commonjs",
