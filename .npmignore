@@ -1,0 +1,14 @@
+# Exclude development, config, and test files from npm package
+node_modules
+.husky
+.eslintrc*
+eslint.config.*
+commitlint.config.*
+.prettier*
+*.log
+*.md.bak
+*.test.js
+*.spec.js
+.vscode
+.gitignore
+LICENSE.bak
